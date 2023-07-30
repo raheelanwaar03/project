@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+
+
+body{
+    background-color: rgb(95, 95, 95);
+    color: rgb(0, 0, 0);
+}
+
+.heading {
+    width: 100%;
+    text-align: center;
+    font-family: fantasy;
+}
+
+.details #pills-tab {
+    background-color: #a81614;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: cursive;
+}
+
+.details #pills-tab .nav-link,
+.details #pills-tab .nav-link.active {
+    position: relative;
+    padding: 20px;
+}
+
+.details #pills-tab .nav-link.active::before {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 25px solid #a81614;
+}
+
+.tab-pane {
+    padding: 30px;
+    font-family: monospace;
+}
+
+.heading {
+    font-size: 1.8em;
+    letter-spacing: -.01em;
+    /* line-height: 1.2px; */
+    text-align: center;
+    padding: 0%;
+    color: #a81614;
+    background-color: white;
+}
+
+.Numbercount {
+    background-color: #a81614;
+    margin: 10px auto;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.tab-pane .carousel-item img {
+    width: 100%;
+    height: 500px;
+}
+
+.para {
+    text-align: center;
+}
+
+.heading3 {
+    text-align: center;
+}
+.pop {
+    text-align: center;
+    margin-top: 5%;
+    color: #a81614;
+    font-family: fantasy;
+    font-size: 40px;
+}
+
+.cul {
+    text-align: center;
+    border-color: black;
+    border-radius: 20px;
+    margin-top: 3%;
+}
+
+.hello {
+    text-align: center;
+    border-radius: 10px;
+}
+
+.event {
+    background-color: #a81614;
+}
+
+.pictue-4 {
+    width: 80%;
+    height: 400px;
+    object-fit: contain;
+}
+
+#pills-OVERVIEW #carouselExampleIndicators .carousel-inner {
+    overflow: visible;
+    overflow-x: hidden;
+    height: 700px;
+}
+
+#pills-OVERVIEW .carousel-caption {
+    bottom: -100px;
+    color: black;
+}
+
+
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+
+</style>
+<title>Title</title>
+</head>
+<body>
+    <div class="details">
+        <div>
+            <ul class="nav mb-3 mx-auto " id="pills-tab" role="tablist">
+                <li class="nav-item text-white" role="presentation">
+                    <a class="nav-link active" id="pills-OVERVIEW-tab" data-toggle="pill" href="#pills-OVERVIEW" role="tab" aria-controls="pills-OVERVIEW" aria-selected="true">PERSONAL INFO</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-INDEPTH-tab" data-toggle="pill" href="#pills-INDEPTH" role="tab" aria-controls="pills-INDEPTH" aria-selected="false">RECHARGE/WITHDRAW</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="pills-Exploration-tab" data-toggle="pill" href="#pills-Exploration" role="tab" aria-controls="pills-Exploration" aria-selected="false">PAYMENT METHOD</a>
+                </li>
+            </ul>
+            <div class="container ">
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active " id="pills-OVERVIEW" role="tabpanel" aria-labelledby="pills-OVERVIEW-tab">
+
+
+
+                        <div id="app">
+                            <!-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+                               <div class="container">
+                                  <a class="navbar-brand" href="#">
+                                  Navbar
+                                  </a>
+                                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                                  <span class="navbar-toggler-icon"></span>
+                                  </button>
+                                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    
+                                     <ul class="navbar-nav mr-auto">
+                                     </ul>
+                                    
+                                     <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item">
+                                           <a class="nav-link" href="#">Link One</a>
+                                        </li>
+                                        <li class="nav-item">
+                                           <a class="nav-link" href="#">Link Two</a>
+                                        </li>
+                                     </ul>
+                                  </div>
+                               </div>
+                            </nav> -->
+                            <main class="py-4">
+                               <div class="container">
+                                  <div class="row justify-content-center">
+                                     <div class="col-lg-4">
+                                        <h4 class="pb-2">
+                                           Profile Information
+                                        </h4>
+                                        <span class="text-justify mb-3" style="padding-top:-3px;">Update your account's profile information and email address.<br><br> When You change your email ,you need to verify your email else the account will be blocked</span>
+                                     </div>
+                                     <div class="col-lg-8 text-center pt-2">
+                                        <div class="card py-4 mb-5 mt-md-3 bg-white rounded " style="box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175)">
+                   
+                                           <form>
+                                               <div class="form-group px-3">
+                   
+                                                 <label for="displayName" class="col-12 text-left pl-0">Name</label>
+                                                 <input type="text" class="col-md-8 form-control" placeholder="Jane Doe">
+                   
+                                                 <label for="email" class="pt-3 col-12 text-left pl-0">Email</label>
+                                                 <input type="email" class="col-md-8 form-control"  placeholder="name@example.com">
+                   
+                                               </div>
+                                               <div class="form-group row mb-0 mr-4">
+                                                   <div class="col-md-8 offset-md-4 text-right">
+                                                       <button type="submit" class="btn btn-primary">Save</button>
+                                                    </div>
+                                               </div>
+                                           </form>
+                   
+                                        </div>
+                                     </div>
+                                  </div>
+                                  <div class="border-bottom border-grey"></div>
+                                  <div class="row justify-content-center pt-5">
+                                     <div class="col-lg-4">
+                                        <h4 class="pb-2">
+                                        Update Password</h4>
+                                        <span class="text-justify" style="padding-top:-3px;">Ensure your account is using a long, random password to stay secure.</span>
+                                     </div>
+                                     <div class="col-lg-8 text-center pt-2">
+                                        <div class="card py-4 mb-5 mt-md-3 bg-white rounded" style="box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175)">
+                   
+                                           <form>
+                                               <div class="form-group px-3">
+                   
+                                                 <label for="password" class="col-12 text-left pl-0">New Password</label>
+                                                 <input type="password" class="col-md-8 form-control" placeholder="Password">
+                   
+                                                 <label for="password" class="pt-3 col-12 text-left pl-0">Confirm Password</label>
+                                                 <input type="password" class="col-md-8 form-control"  placeholder="Password">
+                   
+                                               </div>
+                                               <div class="form-group row mb-0 mr-4">
+                                                   <div class="col-md-8 offset-md-4 text-right">
+                                                       <button type="submit" class="btn btn-primary">Save</button>
+                                                   </div>
+                                               </div>
+                                           </form>
+                                        </div>
+                                     </div>
+                                  </div>
+                                  <div class="border-bottom border-grey"></div>
+                                  <div class="row justify-content-center pt-5">
+                                     <div class="col-lg-4">
+                                        <h4 class="pb-2">
+                                        Delete Account</h4>
+                                        <span class="text-justify" style="padding-top:-3px;">Permanently delete your account.</span>
+                                     </div>
+                                     <div class="col-lg-8 pt-0">
+                                        <div class="card py-4 mb-5 mt-md-3 text-black  rounded" style="box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175)">
+                                           <div class="text-left px-3">
+                                              Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.
+                                           </div>
+                   
+                                           <form>
+                                               <div class="form-group row mb-0 mr-4 pt-4 px-3">
+                                                   <div class="col-md-8 offset-l-4 text-left">
+                                                       <button type="submit" class="btn btn-danger pl-3">Delete Account</button>
+                                                   </div>
+                                                </div>
+                                           </form>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+                            </main>
+                         </div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-INDEPTH" role="tabpanel" aria-labelledby="pills-INDEPTH-tab">
+                        <p class="hello ">The smallest planet in our solar system and nearest to the Sun, Mercury is only slightly larger than Earth's Moon. From the surface of Mercury, the Sun would appear more than three times as large as it does when viewed from Earth,
+                            and the sunlight would be as much as seven times brighter.<br> Mercury's surface temperatures are both extremely hot and cold. Because the planet is so close to the Sun, day temperatures can reach highs of 800°F (430°C). Without
+                            an atmosphere to retain that heat at night, temperatures can dip as low as -290°F (-180°C).<br>Despite its proximity to the Sun, Mercury is not the hottest planet in our solar system – that title belongs to nearby Venus, thanks
+                            to its dense atmosphere. But Mercury is the fastest planet, zipping around the Sun every 88 Earth days.
+                        </p>
+                        <h2 class="sake">Namesake&#58;</h2>
+                        <p>Mercury is appropriately named for the swiftest of the ancient Roman gods.</p>
+                        <h2 class="sake">Potential for Life&#58;</h2>
+                        <p>Mercury's environment is not conducive to life as we know it. The temperatures and solar radiation that characterize this planet are most likely too extreme for organisms to adapt to.</p>
+                        <h2 class="sake">Size and Distance&#58;</h2>
+                        <p>With a radius of 1,516 miles (2,440 kilometers), Mercury is a little more than 1/3 the width of Earth. If Earth were the size of a nickel, Mercury would be about as big as a blueberry. From an average distance of 36 million miles
+                            (58 million kilometers), Mercury is 0.4 astronomical units away from the Sun. One astronomical unit (abbreviated as AU), is the distance from the Sun to Earth. From this distance, it takes sunlight 3.2 minutes to travel from
+                            the Sun to Mercury.
+                        </p>
+                        <h2 class="sake">Orbit and Rotation&#58;</h2>
+                        <p>Mercury's highly eccentric, egg-shaped orbit takes the planet as close as 29 million miles (47 million kilometers) and as far as 43 million miles (70 million kilometers) from the Sun. It speeds around the Sun every 88 days, traveling
+                            through space at nearly 29 miles (47 kilometers) per second, faster than any other planet.<br>Mercury spins slowly on its axis and completes one rotation every 59 Earth days. But when Mercury is moving fastest in its elliptical
+                            orbit around the Sun (and it is closest to the Sun), each rotation is not accompanied by sunrise and sunset like it is on most other planets. The morning Sun appears to rise briefly, set, and rise again from some parts of the
+                            planet's surface. The same --> thing happens in reverse at sunset for other parts of the surface. One Mercury solar day (one full day-night cycle) equals 176 Earth days – just over two years on Mercury.<br>Mercury's axis of
+                            rotation is tilted just 2 degrees with respect to the plane of its orbit around the Sun. That means it spins nearly perfectly upright and so does not experience seasons as many other planets do.</p>
+                        <h2 class="sake">Moons&#58;</h2>
+                        <p>Mercury doesn't have moons.</p>
+                        <h2 class="sake">Rings&#58;</h2>
+                        <p>Mercury doesn't have rings.</p>
+                        <h2 class="sake">Formation&#58;</h2>
+                        <p>Mercury formed about 4.5 billion years ago when gravity pulled swirling gas and dust together to form this small planet nearest the Sun. Like its fellow terrestrial planets, Mercury has a central core, a rocky mantle, and a solid
+                            crust.
+                        </p>
+                        <h2 class="sake">Structure&#58;</h2>
+                        <p>Mercury is the second densest planet, after Earth. It has a large metallic core with a radius of about 1,289 miles (2,074 kilometers), about 85 percent of the planet's radius. There is evidence that it is partly molten or liquid.
+                            Mercury's outer shell, comparable to Earth's outer shell (called the mantle and crust), is only about 400 kilometers (250 miles) thick.</p>
+                        <h2 class="sake">Surface&#58;</h2>
+                        <p>Mercury's surface resembles that of Earth's Moon, scarred by many impact craters resulting from collisions with meteoroids and comets. Craters and features on Mercury are named after famous deceased artists, musicians, or authors,
+                            including children's author Dr. Seuss and dance pioneer Alvin Ailey.<br>Very large impact basins, including Caloris (960 miles or 1,550 kilometers in diameter) and Rachmaninoff (190 miles, or 306 kilometers in diameter), were
+                            created by asteroid impacts on the planet's surface early in the solar system's history. While there are large areas of smooth terrain, there are also cliffs, some hundreds of miles long and soaring up to a mile high. They
+                            rose as the planet's interior cooled and contracted over the billions of years since Mercury formed.<br>
+                            <br>
+                        </p>
+                        <h2 class="sake">Atmosphere&#58;</h2>
+                        <p>Instead of an atmosphere, Mercury possesses a thin exosphere made up of atoms blasted off the surface by the solar wind and striking meteoroids. Mercury's exosphere is composed mostly of oxygen, sodium, hydrogen, helium, and potassium.</p>
+                        <h2 class="sake">Magnetosphere&#58;</h2>
+                        <p>Mercury's magnetic field is offset relative to the planet's equator. Though Mercury's magnetic field at the surface has just 1% the strength of Earth's, it interacts with the magnetic field of the solar wind to sometimes create
+                            intense magnetic tornadoes that funnel the fast, hotp solar wind plasma down to the surface of the planet. When the ions strike the surface, they knock off neutrally charged atoms and send them on a loop high into the sky.</p>
+                    </div>
+                    <div class="tab-pane fade" id="pills-Exploration" role="tabpanel" aria-labelledby="pills-Exploration-tab">
+                        <div class="row">
+                            <div class="col-75">
+                              <div class="container">
+                                <form action="/action_page.php">
+                          
+                                  <div class="row">
+                                    <div class="col-50">
+                                      <h3>Billing Address</h3>
+                                      <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                                      <input type="text" id="fname" name="firstname" placeholder="Put YourFull Name Here">
+                                      <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                      <input type="text" id="email" name="email" placeholder="Put Your Email Address Here">
+                                      <label for="adr"><i class="fa fa-address-card-o"></i>Address</label>
+                                      <input type="text" id="adr" name="address" placeholder="Put Your Address Here">
+
+                          
+                                      
+                                    </div>
+                          
+                                    
+                                  <input type="submit" value="Continue to checkout" class="btn">
+                                </form>
+                              </div>
+                            </div>
+                          
+                            
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

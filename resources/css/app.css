@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+
+  .login-page {
+    background-image: url('/assets/img/gallery/6.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  
