@@ -68,9 +68,9 @@
                                 <td>{{ $data->created_at }}</td>
                                 <td>{{ $data->Action }} </td>
                                 <td><a class="btn btn-success py-2"
-                                        href="{{ route('Admin.Approve.Widthraw', $data->id) }}">Approved</a></td>
+                                        href="{{ route('Admin.Approve.Payment', $data->id) }}">Approved</a></td>
                                 <td><a class="btn btn-danger py-2"
-                                        href="{{ route('Admin.Rejected.Widthraw', $data->id) }}">Rejected</a></td>
+                                        href="{{ route('Admin.Rejected.Payment', $data->id) }}">Rejected</a></td>
                             </tr>
                         @endforeach
 

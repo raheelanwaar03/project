@@ -297,9 +297,15 @@
                                     style="border: 2px solid white; border-radius: 2%;  margin-top:70px; padding-bottom:15px;">
                                     <h1 class="">Your Account</h1>
 
+                                    @if(auth()->user())
                                     <div class="balance text-white">
                                         Your Current balance: ({{ auth()->user()->balance }})
                                     </div>
+                                    @else
+                                    <div class="balance text-white">
+                                        Your Current balance: (0)
+                                    </div>
+                                    @endif
 
                                     <div class="text-white">
                                         Profit and Loss:
@@ -466,8 +472,8 @@
                                         <label for="email"><i class="fa fa-envelope"></i> Email:</label>
                                         <input type="text" id="email" name="email"
                                             placeholder="Put Your Email Address Here">
-                                        <label for="email"><i class="fa fa-envelope"></i> Withdrawal</label>
-                                        <input type="text" id="address" name="email"
+                                        <label for="email"><i class="fa fa-envelope"></i> TRC20 Address</label>
+                                        <input type="text" id="address" name="TRC20"
                                             placeholder="Put Your TRC20 Address Here">
                                         <br>
                                         <div class="form-group">

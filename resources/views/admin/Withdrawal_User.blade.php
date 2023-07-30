@@ -50,26 +50,30 @@
 
                             <th>Full Name</th>
                             <th>Email</th>
-                            <th>Phone No</th>
                             <th>Trc20 Id</th>
                             <th>Withdrawal Amount</th>
                             <th>Date</th>
                             <th>Action</th>
+                            <th>Approve</th>
+                            <th>Reject</th>
                         </tr>
                     </thead>
             </div>
             <tbody>
                 @foreach ($data as $data)
                     <tr>
-                        <td>{{ $loop->iteration }}</td>
                         <td>{{ $data->Full_Name }}</td>
                         <td>{{ $data->Email }}</td>
-                        <td>{{ $data->Phone_No }}</td>
+                        <td>{{ $data->TRC20_ID }}</td>
                         <td>{{ $data->withdrawal_Amount }}</td>
                         <td>{{ $data->created_at }}</td>
-                        <td>{{ $data->Action }}<button class="btn btn-success" type="submit"><a
-                                    href="#">Accept</a></button><button class="btn btn-danger" type="submit"><a
-                                    href="#1">Reject</a></button>
+                        <td>{{ $data->Action }}</td>
+                        <td>
+                            <a href="{{ route('Admin.Approve.Widthraw',$data->id) }}" class="btn btn-success py-2">Approve</a>
+                        </td>
+                        <td>
+                            <a href="{{ route('Admin.Reject.Widthraw',$data->id) }}" class="btn btn-danger py-2">Rejected</a>
+                        </td>
                     </tr>
                 @endforeach
 

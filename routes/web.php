@@ -37,8 +37,10 @@ Route::get('Withdrawal_User', [admin::class, 'addview1']);
 
 Route::get('Total_User', [admin::class, 'addview2']);
 
-Route::get('/approved/{id}', [admin::class, 'approved'])->name('Admin.Approve.Widthraw');
-Route::get('/rejected/{id}', [admin::class, 'rejected'])->name('Admin.Rejected.Widthraw');
+Route::get('/approved/{id}', [admin::class, 'approved'])->name('Admin.Approve.Payment');
+Route::get('/rejected/{id}', [admin::class, 'rejected'])->name('Admin.Rejected.Payment');
+Route::get('/approve/widthraw/{id}', [admin::class, 'approveWidthraw'])->name('Admin.Approve.Widthraw');
+Route::get('/reject/widthraw/{id}', [admin::class, 'rejecteWidthraw'])->name('Admin.Reject.Widthraw');
 
 
 Route::middleware([

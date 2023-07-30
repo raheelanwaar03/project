@@ -39,7 +39,7 @@ class clean extends Command
         $user->name = 'Admin';
         $user->email = 'admin@gmail.com';
         $user->referral = 'default';
-        $user->balance = '0';
+        $user->balance = 100;
         $user->password = Hash::make('asdfasdf');
         $user->save();
 
@@ -48,7 +48,7 @@ class clean extends Command
         $user->name = 'User';
         $user->email = 'user@gmail.com';
         $user->referral = 'default';
-        $user->balance = '0';
+        $user->balance = 100;
         $user->password = Hash::make('asdfasdf');
         $user->save();
         // Adding Plans

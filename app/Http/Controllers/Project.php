@@ -56,9 +56,6 @@ class Project extends Controller
     }
     public function PaymentRequest(Request $request)
     {
-
-
-
         $data = new PaymentRequest;
         $data->Full_Name = $request->name;
         $data->Email = $request->email;
@@ -81,20 +78,23 @@ class Project extends Controller
     }
     public function WithdrawalRequest(Request $request)
     {
+
+        if ($request->Withdrawal > auth()->user()->balance) {
+            return redirect()->back()->with('error', 'you have not enough balance');
+        }
+
         $data = new WithdrawalRequest;
         $data->Full_Name = $request->name;
         $data->Email =  $request->email;
-        $data->Phone_no = $request->phone;
         $data->withdrawal_Amount = $request->Withdrawal;
-        if (Auth::id()) {
-            $data->user_id = Auth::user()->id;
-        }
+        $data->Action = 'In Progress';
+        $data->TRC20_ID = $request->TRC20;
+        $data->user_id = Auth::user()->id;
         $data->save();
         return redirect()->back();
     }
     public function Payment_User()
     {
-
         if (Auth::id()) {
             $userid = Auth::user()->id;
             $Payment = Payment_Requests::where('user_id,$userid')->get();
