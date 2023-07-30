@@ -67,10 +67,10 @@
                                 <td>{{ $data->user_id }}</td>
                                 <td>{{ $data->created_at }}</td>
                                 <td>{{ $data->Action }} </td>
-                                <!-- <td><a class="btn btn-success" href="{{ url('approved', $data->user_id) }}">Approved</a></td>
-<td><a class="btn btn-danger"href="">Cancelled</a></td> -->
-
-
+                                <td><a class="btn btn-success py-2"
+                                        href="{{ route('Admin.Approve.Widthraw', $data->id) }}">Approved</a></td>
+                                <td><a class="btn btn-danger py-2"
+                                        href="{{ route('Admin.Rejected.Widthraw', $data->id) }}">Rejected</a></td>
                             </tr>
                         @endforeach
 

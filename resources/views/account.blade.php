@@ -298,7 +298,7 @@
                                     <h1 class="">Your Account</h1>
 
                                     <div class="balance text-white">
-                                        Your Current balance:
+                                        Your Current balance: ({{ auth()->user()->balance }})
                                     </div>
 
                                     <div class="text-white">
@@ -339,7 +339,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
             <div id="walletContainer">

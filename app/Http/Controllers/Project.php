@@ -65,8 +65,8 @@ class Project extends Controller
         $data->Phone_No = $request->phone;
         $data->TRC20_ID = $request->payment_id;
         $data->Recharge_Amount = $request->Payment_Amount;
-        if ($request->has('image')) {
-            $image = $request['image'];
+        if ($request->has('file')) {
+            $image = $request['file'];
             $imageName = rand(111111, 999999) . '.' . $image->getClientOriginalExtension();
             $image->move(public_path('images'), $imageName);
             $data->Screen_shot = $imageName;
