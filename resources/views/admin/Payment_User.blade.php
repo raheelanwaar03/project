@@ -56,7 +56,7 @@
                     <tbody>
                         @foreach ($data as $data)
                             <tr>
-                                <td>{{ $loop->id }}</td>
+                                <td>{{ $loop->iteration }}</td>
                                 <td>{{ $data->Full_Name }}</td>
                                 <td>{{ $data->Email }}</td>
                                 <td>{{ $data->Phone_No }}</td>
@@ -70,7 +70,7 @@
                                 <td><a class="btn btn-success py-2"
                                         href="{{ route('Admin.Approve.Payment', $data->id) }}">Approve</a></td>
                                 <td><a class="btn btn-danger py-2"
-                                        href="{{ route('Admin.Rejected.Payment', $data->id) }}">Rejecte</a></td>
+                                        href="{{ route('Admin.Rejected.Payment', $data->id) }}">Reject</a></td>
                             </tr>
                         @endforeach
 
