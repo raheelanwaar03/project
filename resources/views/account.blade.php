@@ -420,8 +420,7 @@
                                                             <div class="d-flex justify-content-center align-items-center">
                                                                 <input type="text" name="payment_id" value="TD4mKyeDasFgJSW2pcShhuxqKNLSLKtpuW"
                                                                     id="wallet" readonly>
-                                                                <!-- The button used to copy the text -->
-                                                                <button onclick="copyWallet()" style="margin-left: -45px;margin-top:-20px">Copy</button>
+                                                                    <a onclick="copyWallet()" style="margin-left: -45px;margin-top:-20px">Copy</a>
                                                             </div>
                                                     </div>
                                                     <label for="Payment_Amount"><i class="fa fa-user"></i> Payment
