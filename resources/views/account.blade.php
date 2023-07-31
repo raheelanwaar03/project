@@ -168,9 +168,9 @@
 
 
         /* span.price {
-                          float: right;
-                          color: grey;
-                        } */
+                                  float: right;
+                                  color: grey;
+                                } */
 
         /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
         @media (max-width: 800px) {
@@ -205,11 +205,11 @@
         }
 
         /* .container {
-                                    max-width: 600px;
-                                    margin: 0 auto;
-                                    padding: 20px;
-                                }
-                                 */
+                                            max-width: 600px;
+                                            margin: 0 auto;
+                                            padding: 20px;
+                                        }
+                                         */
         h1 {
             text-align: center;
         }
@@ -297,14 +297,14 @@
                                     style="border: 2px solid white; border-radius: 2%;  margin-top:70px; padding-bottom:15px;">
                                     <h1 class="">Your Account</h1>
 
-                                    @if(auth()->user())
-                                    <div class="balance text-white">
-                                        Your Current balance: ({{ auth()->user()->balance }})
-                                    </div>
+                                    @if (auth()->user())
+                                        <div class="balance text-white">
+                                            Your Current balance: ({{ auth()->user()->balance }})
+                                        </div>
                                     @else
-                                    <div class="balance text-white">
-                                        Your Current balance: (0)
-                                    </div>
+                                        <div class="balance text-white">
+                                            Your Current balance: (0)
+                                        </div>
                                     @endif
 
                                     <div class="text-white">
@@ -373,7 +373,7 @@
                 <ul class="nav mb-2 mx-auto " id="pills-tab" role="tablist">
                     <li class="nav-item text-white" role="presentation">
                         <a class="nav-link active" id="pills-OVERVIEW-tab" data-toggle="pill" href="#pills-OVERVIEW"
-                            role="tab" aria-controls="pills-OVERVIEW" aria-selected="true">PAYMENT REQUEST</a>
+                            role="tab" aria-controls="pills-OVERVIEW" aria-selected="true">DEPOSIT REQUEST</a>
                     </li>
                     <li class="nav-item text-white" role="presentation">
                         <a class="nav-link text-white" id="pills-INDEPTH-tab" data-toggle="pill" href="#pills-INDEPTH"
@@ -387,7 +387,7 @@
 
 
                             <h1>Note: Send Your Payment To The Giving Trc20 Address And Then Admin Will Check Then Approved
-                                IT. and your Account will be updated after every 24 Hours. Make your you have to check TRC2o
+                                IT. and your Account will be updated after every 24 Hours. Make your you have to check TRC20
                                 address properly before sending the amount</h1><br>
                             <div class="row">
                                 <div class="col-75">
@@ -400,7 +400,7 @@
                                                 <div class="col-50">
                                                     <h1 class="account"
                                                         style="text-align: center ; margin-top: 3%; margin-bottom: 5%; font-size: 40px; ">
-                                                        PAYMENT REQUEST</h1>
+                                                        DEPOSIT REQUEST</h1>
                                                     <label for="fname"><i class="fa fa-user"></i> Full Name:</label>
                                                     <input type="text" id="fname" name="name"
                                                         placeholder="Put Your Full Name Here">
@@ -417,11 +417,13 @@
                                                     <div class="form-group">
                                                         <label for="Payment_Amount"><i class="fa fa-user"></i> TRC20
                                                             Address:</label>
-                                                            <div class="d-flex justify-content-center align-items-center">
-                                                                <input type="text" name="payment_id" value="TD4mKyeDasFgJSW2pcShhuxqKNLSLKtpuW"
-                                                                    id="wallet" readonly>
-                                                                    <a onclick="copyWallet()" style="margin-left: -45px;margin-top:-20px">Copy</a>
-                                                            </div>
+                                                        <div class="d-flex justify-content-center align-items-center">
+                                                            <input type="text" name="payment_id"
+                                                                value="TD4mKyeDasFgJSW2pcShhuxqKNLSLKtpuW" id="wallet"
+                                                                readonly>
+                                                            <a onclick="copyWallet()"
+                                                                style="margin-left: -45px;margin-top:-20px">Copy</a>
+                                                        </div>
                                                     </div>
                                                     <label for="Payment_Amount"><i class="fa fa-user"></i> Payment
                                                         Amount:</label>
@@ -455,12 +457,12 @@
                             </div>
                             <div class="container">
                                 <div class="withdrawal-form">
-                                    <h1>Note: By Submitting Withdrawal Request Admin Has Rights TO Withdraw your Payment .
-                                        Admin Will Release Your Payment Amount Into 4 to 5 Hour after Submitting Request.
-                                        you can withdrawal minimum 5$</h1>
+                                    <h1>Note: Submit your widthrawal request here. The requested amount will be deposited to
+                                        your address in less than 24 hours. Please make sure your minimum payment threshold
+                                        is completed before requesting the withdrawal.</h1>
                                     <h1 class="account"
                                         style="text-align: center ; margin-top: 3%; margin-bottom: 5%; font-size: 40px; ">
-                                        WITHDRAWAL REQUEST</h1>
+                                        WIDTHRAWAL REQUEST</h1>
 
                                     <form action="{{ url('WithdrawalRequest') }}" method="POST">
                                         @csrf
@@ -514,14 +516,14 @@
         }
     </script>
 
-<script>
-    function copyWallet() {
-        // Get the text field
-        var copyText = document.getElementById("wallet");
-        copyText.select();
-        copyText.setSelectionRange(0, 99999);
-        navigator.clipboard.writeText(copyText.value);
-        // Alert the copied text
-        alert("Wallet address copied : " + copyText.value);
-    }
-</script>
+    <script>
+        function copyWallet() {
+            // Get the text field
+            var copyText = document.getElementById("wallet");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+            // Alert the copied text
+            alert("Wallet address copied : " + copyText.value);
+        }
+    </script>
