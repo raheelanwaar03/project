@@ -168,9 +168,9 @@
 
 
         /* span.price {
-                                  float: right;
-                                  color: grey;
-                                } */
+                                              float: right;
+                                              color: grey;
+                                            } */
 
         /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
         @media (max-width: 800px) {
@@ -205,11 +205,11 @@
         }
 
         /* .container {
-                                            max-width: 600px;
-                                            margin: 0 auto;
-                                            padding: 20px;
-                                        }
-                                         */
+                                                        max-width: 600px;
+                                                        margin: 0 auto;
+                                                        padding: 20px;
+                                                    }
+                                                     */
         h1 {
             text-align: center;
         }
@@ -380,67 +380,71 @@
                             role="tab" aria-controls="pills-INDEPTH" aria-selected="false">WITHDRAW REQUEST</a>
                     </li>
                 </ul>
-                <div class="container ">
+                <div class="container">
                     <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active " id="pills-OVERVIEW" role="tabpanel"
+                        <div class="tab-pane fade show active" id="pills-OVERVIEW" role="tabpanel"
                             aria-labelledby="pills-OVERVIEW-tab">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-xl-5 col-lg-5 col-md-8 col-sm-10"> </div>
+                                <div class="col-xl-7 col-lg-7 col-md-12"></div>
+                                <div class="row align-items-center justify-content-between">
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="withdrawal-form">
+                                    <h1>Note: Send Your Payment To The Giving Trc20 Address And Then Admin Will Check Then
+                                        Approved
+                                        IT. and your Account will be updated after every 24 Hours. Make your you have to
+                                        check TRC20
+                                        address properly before sending the amount.</h1>
+                                    <form action="{{ url('PaymentRequest') }}" method="POST" enctype="multipart/form-data">
+                                        @csrf
+                                        <!-- Add the CSRF token -->
+                                        <div class="row">
+                                            <div class="col-50">
+                                                <h1 class="account"
+                                                    style="text-align: center ; margin-top: 3%; margin-bottom: 5%; font-size: 40px; ">
+                                                    DEPOSIT REQUEST</h1>
+                                                <label for="fname"><i class="fa fa-user"></i> Full Name:</label>
+                                                <input type="text" id="fname" name="name"
+                                                    placeholder="Put Your Full Name Here">
+                                                <label for="email"><i class="fa fa-envelope"></i> Email:</label>
+                                                <input type="text" id="email" name="email"
+                                                    placeholder="Put Your Email Address Here">
+                                                <label for="Phone"><i class="fa fa-envelope"></i> Phone No:</label>
+                                                <br>
+                                                <input type="number" id="phone" name="phone"
+                                                    placeholder="Put Your Phone Number Here">
 
-
-                            <h1>Note: Send Your Payment To The Giving Trc20 Address And Then Admin Will Check Then Approved
-                                IT. and your Account will be updated after every 24 Hours. Make your you have to check TRC20
-                                address properly before sending the amount</h1><br>
-                            <div class="row">
-                                <div class="col-75">
-                                    <div class="container">
-                                        <form action="{{ url('PaymentRequest') }}" method="POST"
-                                            enctype="multipart/form-data">
-                                            @csrf
-                                            <!-- Add the CSRF token -->
-                                            <div class="row">
-                                                <div class="col-50">
-                                                    <h1 class="account"
-                                                        style="text-align: center ; margin-top: 3%; margin-bottom: 5%; font-size: 40px; ">
-                                                        DEPOSIT REQUEST</h1>
-                                                    <label for="fname"><i class="fa fa-user"></i> Full Name:</label>
-                                                    <input type="text" id="fname" name="name"
-                                                        placeholder="Put Your Full Name Here">
-                                                    <label for="email"><i class="fa fa-envelope"></i> Email:</label>
-                                                    <input type="text" id="email" name="email"
-                                                        placeholder="Put Your Email Address Here">
-                                                    <label for="Phone"><i class="fa fa-envelope"></i> Phone No:</label>
-                                                    <br>
-                                                    <input type="tel" id="phone" name="phone"
-                                                        placeholder="Put Your Phone Number Here">
-
-                                                    <br>
-                                                    <br>
-                                                    <div class="form-group">
-                                                        <label for="Payment_Amount"><i class="fa fa-user"></i> TRC20
-                                                            Address:</label>
-                                                        <div class="d-flex justify-content-center align-items-center">
-                                                            <input type="text" name="payment_id"
-                                                                value="TD4mKyeDasFgJSW2pcShhuxqKNLSLKtpuW" id="wallet"
-                                                                readonly>
-                                                            <a onclick="copyWallet()"
-                                                                style="margin-left: -45px;margin-top:-20px">Copy</a>
-                                                        </div>
+                                                <br>
+                                                <br>
+                                                <div class="form-group">
+                                                    <label for="Payment_Amount"><i class="fa fa-user"></i> TRC20
+                                                        Address:</label>
+                                                    <div class="d-flex justify-content-center align-items-center">
+                                                        <input type="text" name="payment_id"
+                                                            value="TD4mKyeDasFgJSW2pcShhuxqKNLSLKtpuW" id="wallet"
+                                                            readonly>
+                                                        <a onclick="copyWallet()" style='margin-top: -26px;'>Copy</a>
                                                     </div>
-                                                    <label for="Payment_Amount"><i class="fa fa-user"></i> Payment
-                                                        Amount:</label>
-                                                    <input type="text" id="Payment_Amount" name="Payment_Amount"
-                                                        placeholder="Enter Payment Amount">
-                                                    <br>
-                                                    <label for="Screen Shot"> Screen Shot:</label>
-                                                    <br>
-                                                    <input type="File" name="file">
-                                                    <br>
-                                                    <br>
                                                 </div>
-                                                <button class="btn " type="submit">Continue To Check Out</button>
-
+                                                <label for="Payment_Amount"><i class="fa fa-user"></i> Payment
+                                                    Amount:</label>
+                                                <input type="number" id="Payment_Amount" name="Payment_Amount"
+                                                    placeholder="Enter Payment Amount">
+                                                <br>
+                                                <label for="Screen Shot"> Screen Shot:</label>
+                                                <br>
+                                                <input type="File" name="file">
+                                                <br>
+                                                <br>
                                             </div>
-                                        </form>
-                                    </div>
+                                        </div>
+                                        <div class="">
+                                            <button class="btn" type="submit">Continue To Check Out</button>
+                                        </div>
+                                    </form>
+
                                 </div>
                             </div>
                         </div>
@@ -450,9 +454,6 @@
                                 <div class="col-xl-5 col-lg-5 col-md-8 col-sm-10"> </div>
                                 <div class="col-xl-7 col-lg-7 col-md-12"></div>
                                 <div class="row align-items-center justify-content-between">
-
-
-
                                 </div>
                             </div>
                             <div class="container">
