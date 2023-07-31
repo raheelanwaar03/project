@@ -8,14 +8,12 @@ use App\Models\WithdrawalRequest;
 use App\Models\DailyProfit;
 use App\Models\User;
 use Carbon\Carbon;
-use Illuminate\Http\Request;
 
 class admin extends Controller
 {
     public function addview()
     {
         $data = PaymentRequest::get();
-
         return view('admin.Payment_User', compact('data'));
     }
     public function addview1()
