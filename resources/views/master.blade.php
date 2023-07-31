@@ -73,27 +73,27 @@
                                         </nav>
                                     </div>
                                 </div>
-                            </div>
-                            @section('banner')
-                            @show()
-                            <div class="container">
-                                <div class="ticker">
-                                    <div class="tittle">
-                                        <h5 class="break" style="color: white;"> Alert</h5>
-                                    </div>
-                                    <div class="news">
-                                        <marquee>
-                                            <p class="info" style="color: white; ">Lorem ipsum dolor, sit amet
-                                                consectetur adipisicing elit. Omnis ipsam laborum suscipit blanditiis,
-                                                voluptate est molestiae architecto soluta? Perferendis nobis, aspernatur
-                                                recusandae a nisi enim excepturi consequuntur optio provident
-                                                omnis qui neque amet. Maiores, a! Quibusdam corporis adipisci dicta
-                                                doloremque, consequatur quae nisi magni, obcaecati natus quisquam
-                                                reiciendis, dolore neque?</p>
-                                        </marquee>
+                                <div class="container">
+                                    <div class="ticker">
+                                        <div class="tittle">
+                                            <h5 class="break" style="color: white;"> Alert</h5>
+                                        </div>
+                                        <div class="news">
+                                            <marquee>
+                                                <p class="info" style="color: white; ">Lorem ipsum dolor, sit amet
+                                                    consectetur adipisicing elit. Omnis ipsam laborum suscipit blanditiis,
+                                                    voluptate est molestiae architecto soluta? Perferendis nobis, aspernatur
+                                                    recusandae a nisi enim excepturi consequuntur optio provident
+                                                    omnis qui neque amet. Maiores, a! Quibusdam corporis adipisci dicta
+                                                    doloremque, consequatur quae nisi magni, obcaecati natus quisquam
+                                                    reiciendis, dolore neque?</p>
+                                            </marquee>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            @section('banner')
+                            @show()
                         </div>
                         <!-- Mobile Menu -->
                         <div class="col-12">
