@@ -55,7 +55,6 @@ class admin extends Controller
             $upliner->save();
         }
 
-
         return redirect()->back();
     }
 
@@ -116,9 +115,6 @@ class admin extends Controller
                 }
 
             }
-
-
-
 
         }
 
