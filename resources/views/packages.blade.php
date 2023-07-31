@@ -1,6 +1,7 @@
 @extends('master')
 @section('tittle', 'PACKAGES')
 @section('content')
+<x-alert/>
     <main>
         <!-- Slider Area Start-->
         <div class="slider-area slider-bg ">
@@ -38,11 +39,11 @@
                                     <form action="" data-toggle="validator" role="form" id="stForm"
                                         enctype="multipart/form-data" method="post" accept-charset="utf-8">
                                         <input type="text" value="starter" name="Silver Package1" hidden="">
-                                        <input type="text" value="$10" name="price" hidden="">
-                                        <input type="text" value="/ 180 Days" name="Days" hidden="">
-                                        <input type="text" value="0.4$" name="Daily Income" hidden="">
-                                        <input type="text" value="$5" name="Minimum Withdrawal" hidden="">
-                                        <input type="text" value="72$" name="Total After 180 Days" hidden="">
+                                        <input type="text" value="10" name="price" hidden="">
+                                        <input type="text" value="180" name="Days" hidden="">
+                                        <input type="text" value="0.4" name="Daily Income" hidden="">
+                                        <input type="text" value="5" name="Minimum Withdrawal" hidden="">
+                                        <input type="text" value="72" name="Total After 180 Days" hidden="">
                                     </form>
                                 </div>
                             </div>
@@ -73,11 +74,11 @@
                                         id="stForm" enctype="multipart/form-data" method="post" accept-charset="utf-8">
                                         @csrf
                                         <input type="text" value="starter" name="Silver Package2" hidden="">
-                                        <input type="text" value="$25" name="price" hidden="">
-                                        <input type="text" value="/ 180 Days" name="Days" hidden="">
-                                        <input type="text" value="1.2$" name="Daily Income" hidden="">
-                                        <input type="text" value="$10" name="Minimum Withdrawal" hidden="">
-                                        <input type="text" value="216$" name="Total After 180 Days" hidden="">
+                                        <input type="text" value="25" name="price" hidden="">
+                                        <input type="text" value="180" name="Days" hidden="">
+                                        <input type="text" value="1.2" name="Daily Income" hidden="">
+                                        <input type="text" value="10" name="Minimum Withdrawal" hidden="">
+                                        <input type="text" value="216" name="Total After 180 Days" hidden="">
 
                                 </div>
                             </div>
@@ -110,11 +111,11 @@
 
                                         @CSRF<input type="text" value="Gold_Package1" name="Package_name"
                                             hidden="">
-                                        <input type="text" value="$50" name="price" hidden="">
-                                        <input type="text" value="/ 180 Days" name="Days" hidden="">
-                                        <input type="text" value="3$" name="Daily Income" hidden="">
-                                        <input type="text" value="$20" name="Minimum Withdrawal" hidden="">
-                                        <input type="text" value="540$" name="Total After 180 Days" hidden="">
+                                        <input type="text" value="50" name="price" hidden="">
+                                        <input type="text" value="180" name="Days" hidden="">
+                                        <input type="text" value="3" name="Daily Income" hidden="">
+                                        <input type="text" value="20" name="Minimum Withdrawal" hidden="">
+                                        <input type="text" value="540" name="Total After 180 Days" hidden="">
 
                                 </div>
                             </div>
@@ -149,11 +150,11 @@
                                         accept-charset="utf-8">
                                         @csrf
                                         <input type="text" value="Gold_Package2" name="Package_name" hidden="">
-                                        <input type="text" value="$100" name="price" hidden="">
-                                        <input type="text" value="/180 " name="Days" hidden="">
-                                        <input type="text" value="6$" name="Daily Income" hidden="">
-                                        <input type="text" value="$50" name="Minimum Withdrawal" hidden="">
-                                        <input type="text" value="1080$" name="Total After 180 Days" hidden="">
+                                        <input type="text" value="100" name="price" hidden="">
+                                        <input type="text" value="180" name="Days" hidden="">
+                                        <input type="text" value="6" name="Daily Income" hidden="">
+                                        <input type="text" value="50" name="Minimum Withdrawal" hidden="">
+                                        <input type="text" value="1080" name="Total After 180 Days" hidden="">
 
                                 </div>
                             </div>
@@ -186,11 +187,11 @@
                                         @csrf
                                         <input type="text" value="Diamond_Package1" name="Package_name"
                                             hidden="">
-                                        <input type="text" value="$500" name="price" hidden="">
-                                        <input type="text" value="/ 180 Days" name="Days" hidden="">
-                                        <input type="text" value="30$" name="Daily_Income" hidden="">
-                                        <input type="text" value="$250" name="Minimum_Withdrawal" hidden="">
-                                        <input type="text" value="5400$" name="Total_After_180_Days" hidden="">
+                                        <input type="text" value="500" name="price" hidden="">
+                                        <input type="text" value="180" name="Days" hidden="">
+                                        <input type="text" value="30" name="Daily_Income" hidden="">
+                                        <input type="text" value="250" name="Minimum_Withdrawal" hidden="">
+                                        <input type="text" value="5400" name="Total_After_180_Days" hidden="">
 
                                 </div>
                             </div>
@@ -224,11 +225,11 @@
                                         @csrf
                                         <input type="text" value="Diamond_Package2" name="Package_name"
                                             hidden="">
-                                        <input type="text" value="$1000" name="price" hidden="">
-                                        <input type="text" value="/ 200 Days" name="Days" hidden="">
-                                        <input type="text" value="60$" name="Daily Income" hidden="">
-                                        <input type="text" value="$500" name="Minimum Withdrawal" hidden="">
-                                        <input type="text" value="12000$" name="Total After 180 Days" hidden="">
+                                        <input type="text" value="1000" name="price" hidden="">
+                                        <input type="text" value="200" name="Days" hidden="">
+                                        <input type="text" value="60" name="Daily Income" hidden="">
+                                        <input type="text" value="500" name="Minimum Withdrawal" hidden="">
+                                        <input type="text" value="12000" name="Total After 180 Days" hidden="">
 
                                 </div>
                             </div>

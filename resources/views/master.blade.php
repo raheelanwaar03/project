@@ -32,6 +32,7 @@
 <body>
 
     <header>
+        <x-alert/>
 
         <!-- Header Start -->
         <div class="header-area header-transparent">

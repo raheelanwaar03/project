@@ -308,8 +308,7 @@
                                     @endif
 
                                     <div class="text-white">
-                                        Profit and Loss:
-                                        <!-- Replace with the actual daily profit -->
+                                        Profit and Loss: {{ dailyProfit() }}
                                     </div>
                                 </div>
                             </div>
@@ -418,12 +417,12 @@
                                                     <div class="form-group">
                                                         <label for="Payment_Amount"><i class="fa fa-user"></i> TRC20
                                                             Address:</label>
-
-                                                        <!-- The text field -->
-                                                        <input type="text" value="TD4mKyeDasFgJSW2pcShhuxqKNLSLKtpuW"
-                                                            id="myInput">
-                                                        <!-- The button used to copy the text -->
-                                                        <button onclick="myFunction()">Copy text</button>
+                                                            <div class="d-flex justify-content-center align-items-center">
+                                                                <input type="text" name="payment_id" value="TD4mKyeDasFgJSW2pcShhuxqKNLSLKtpuW"
+                                                                    id="wallet" readonly>
+                                                                <!-- The button used to copy the text -->
+                                                                <button onclick="copyWallet()" style="margin-left: -45px;margin-top:-20px">Copy</button>
+                                                            </div>
                                                     </div>
                                                     <label for="Payment_Amount"><i class="fa fa-user"></i> Payment
                                                         Amount:</label>
@@ -515,3 +514,15 @@
             alert("Copied the text: " + copyText.value);
         }
     </script>
+
+<script>
+    function copyWallet() {
+        // Get the text field
+        var copyText = document.getElementById("wallet");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value);
+        // Alert the copied text
+        alert("Wallet address copied : " + copyText.value);
+    }
+</script>

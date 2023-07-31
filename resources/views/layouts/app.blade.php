@@ -20,6 +20,8 @@
     <body class="font-sans antialiased">
         <x-banner />
 
+        <x-alert/>
+
         <div class="">
             @livewire('navigation-menu')
 

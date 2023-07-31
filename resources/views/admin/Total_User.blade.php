@@ -21,15 +21,6 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.jqueryui.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.semanticui.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.semanticui.min.css">
-   
-
-
-
-
-
-
-
-
 
 
   </head>
@@ -41,7 +32,7 @@
       <div class="container-fluid page-body-wrapper">
 
         @include('admin.navbar')
-    
+
         <div class= "container-fluid page-body-wrapper">
             <div >
             <table id="myTable" class="display">
@@ -49,7 +40,8 @@
                 <tr style="background-color:black">
                 <th>Name</th>
                 <th>Email</th>
-                <th>Referral Code</th>
+                <th>Balance</th>
+                <th>Registration Date</th>
             </tr>
                 </thead>
                 <tbody>
@@ -57,13 +49,14 @@
                 <tr>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
-                    <td>{{ $user->referral_code }}</td>
+                    <td>{{ $user->balance }}</td>
+                    <td>{{ $user->created_at }}</td>
                 </tr>
             @endforeach
         </tbody>
               </table>
 
-          
+
             </div>
 
         </div>

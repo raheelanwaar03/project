@@ -41,6 +41,10 @@ Route::get('/approved/{id}', [admin::class, 'approved'])->name('Admin.Approve.Pa
 Route::get('/rejected/{id}', [admin::class, 'rejected'])->name('Admin.Rejected.Payment');
 Route::get('/approve/widthraw/{id}', [admin::class, 'approveWidthraw'])->name('Admin.Approve.Widthraw');
 Route::get('/reject/widthraw/{id}', [admin::class, 'rejecteWidthraw'])->name('Admin.Reject.Widthraw');
+// giving all users thier daily profit
+Route::get('/daily-Profit',[admin::class,'dailyProfit'])->name('Admin.Daily.Profit');
+
+
 
 
 Route::middleware([
