@@ -16,7 +16,7 @@ class admin extends Controller
 {
     public function addview()
     {
-        $data = PaymentRequest::all();
+        $data = PaymentRequest::get();
 
         return view('admin.Payment_User', compact('data'));
     }
