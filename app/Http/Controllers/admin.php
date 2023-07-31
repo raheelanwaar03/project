@@ -22,7 +22,7 @@ class admin extends Controller
     }
     public function addview1()
     {
-        $data = WithdrawalRequest::all();
+        $data = WithdrawalRequest::get();
 
         return view('admin.Withdrawal_User', compact('data'));
     }
