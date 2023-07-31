@@ -23,7 +23,7 @@ class Project extends Controller
                 return  view('admin.home');
             }
         } else {
-            return redirect()->back;
+            return redirect()->back();
         }
     }
     public function index()
@@ -45,8 +45,6 @@ class Project extends Controller
     }
     public function Account(Request $id)
     {
-
-
         return view('account');
     }
 
@@ -74,7 +72,7 @@ class Project extends Controller
         }
         $data->save();
 
-        return redirect()->back()->with('success','You have successfully requested for deposit. Please wait for admin checking');
+        return redirect()->back()->with('success', 'You have successfully requested for deposit. Please wait for admin checking');
     }
     public function WithdrawalRequest(Request $request)
     {
@@ -97,7 +95,7 @@ class Project extends Controller
     {
         if (Auth::id()) {
             $userid = Auth::user()->id;
-            $Payment = Payment_Requests::where('user_id',$userid)->get();
+            $Payment =  PaymentRequest::where('user_id', $userid)->get();
             return view('admin.Payment_User', compact('Payment'));
         } else {
             return redirect()->back();
@@ -108,21 +106,19 @@ class Project extends Controller
         // checking user account balanc
         if (Auth::id()) {
             $userBalance = Auth::user()->balance;
-        }
-        else{
-            return redirect()->route('login')->with('error','Please login first');
+        } else {
+            return redirect()->route('login')->with('error', 'Please login first');
         }
 
         $planPrice = $request->price;
 
-        if($userBalance < $planPrice)
-        {
-            return redirect()->back()->with('error','you have not enough balance');
+        if ($userBalance < $planPrice) {
+            return redirect()->back()->with('error', 'you have not enough balance');
         }
 
         // deducting package amount from user account
 
-        $user = User::where('id',auth()->user()->id)->first();
+        $user = User::where('id', auth()->user()->id)->first();
         $user->balance -= $planPrice;
         $user->save();
         // saving package details in database
@@ -139,6 +135,6 @@ class Project extends Controller
         }
         $data->save();
 
-        return redirect()->back()->with('success','Your package activated successfully');
+        return redirect()->back()->with('success', 'Your package activated successfully');
     }
 }
