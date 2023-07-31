@@ -12,9 +12,8 @@
                         <div class="col-xl-8 col-lg-9 col-md-12 ">
                             <div class="hero__caption hero__caption2 text-center">
                                 <h1 data-animation="fadeInLeft" data-delay=".6s ">Choose plan which fit for you</h1>
-                                <p data-animation="fadeInLeft" data-delay=".8s"> Begin your crypto mining journey with our
-                                    affordable Starter Mining Package, providing you with the necessary tools and resources
-                                    to start mining popular cryptocurrencies.</p>
+                                <p data-animation="fadeInLeft" data-delay=".8s"> Begin your USD mining journey with our
+                                    affordable Starter Mining Package.</p>
                             </div>
                         </div>
                     </div>
