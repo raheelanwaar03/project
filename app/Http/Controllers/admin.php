@@ -94,28 +94,23 @@ class admin extends Controller
 
         foreach ($packages as $data) {
             // checking if user get daily profit already
-            $dailyProfit = DailyProfit::where('user_id',$data->user_id)->where('created_at',today());
-            if($dailyProfit == '')
-            {
+            $dailyProfit = DailyProfit::where('user_id', $data->user_id)->where('created_at', today());
+            if (!$dailyProfit) {
                 // getting user buy package details
-                $validPackage = Packages::where('user_id',$data->user_id)->where('created_at', '>' , Carbon::today()->subDays(180) );
+                $validPackage = Packages::where('user_id', $data->user_id)->where('created_at', '>', Carbon::today()->subDays(180));
                 // giving user daily profit
-                if($validPackage != '')
-                {
-                    $user = User::where('id', $data->user_id)->first();
-                    $user->balance += $data->Daily_income;
-                    $user->save();
 
-                    // adding user daily income in database
-                    $daily_profit = new DailyProfit();
-                    $daily_profit->user_id = $data->user_id;
-                    $daily_profit->amount = $data->Daily_income;
-                    $daily_profit->action = 'Daily Profit';
-                    $daily_profit->save();
-                }
+                $user = User::where('id', $validPackage->user_id)->first();
+                $user->balance += $validPackage->Daily_income;
+                $user->save();
 
+                // adding user daily income in database
+                $daily_profit = new DailyProfit();
+                $daily_profit->user_id = $data->user_id;
+                $daily_profit->amount = $data->Daily_income;
+                $daily_profit->action = 'Daily Profit';
+                $daily_profit->save();
             }
-
         }
 
         return redirect()->back()->with('success', 'Daily Profit Given To All Users');
