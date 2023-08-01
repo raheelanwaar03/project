@@ -17,7 +17,7 @@ use App\Http\Controllers\admin;
 
 Route::get('/', [Project::class, 'index']);
 
-Route::get('/home', [Project::class, 'redirect']);
+Route::get('/home', [Project::class, 'redirect'])->name('Home');
 Route::get('about', [Project::class, 'About']);
 Route::get('packages', [Project::class, 'Packages']);
 Route::get('contact', [Project::class, 'Contact']);
@@ -32,17 +32,18 @@ Route::Post('PackagesBuy', [Project::class, 'PackageBuy']);
 Route::post('PaymentRequest', [Project::class, 'PaymentRequest']);
 Route::post('WithdrawalRequest', [project::class, 'WithdrawalRequest']);
 
-Route::get('Payment_User', [admin::class, 'addview']);
-Route::get('Withdrawal_User', [admin::class, 'addview1']);
 
-Route::get('Total_User', [admin::class, 'addview2']);
+Route::get('Payment_User', [admin::class, 'addview'])->middleware('admin');
+Route::get('Withdrawal_User', [admin::class, 'addview1'])->middleware('admin');
 
-Route::get('/approved/{id}', [admin::class, 'approved'])->name('Admin.Approve.Payment');
-Route::get('/rejected/{id}', [admin::class, 'rejected'])->name('Admin.Rejected.Payment');
-Route::get('/approve/widthraw/{id}', [admin::class, 'approveWidthraw'])->name('Admin.Approve.Widthraw');
-Route::get('/reject/widthraw/{id}', [admin::class, 'rejecteWidthraw'])->name('Admin.Reject.Widthraw');
+Route::get('Total_User', [admin::class, 'addview2'])->middleware('admin');
+
+Route::get('/approved/{id}', [admin::class, 'approved'])->name('Admin.Approve.Payment')->middleware('admin');
+Route::get('/rejected/{id}', [admin::class, 'rejected'])->name('Admin.Rejected.Payment')->middleware('admin');
+Route::get('/approve/widthraw/{id}', [admin::class, 'approveWidthraw'])->name('Admin.Approve.Widthraw')->middleware('admin');
+Route::get('/reject/widthraw/{id}', [admin::class, 'rejecteWidthraw'])->name('Admin.Reject.Widthraw')->middleware('admin');
 // giving all users thier daily profit
-Route::get('/daily-Profit',[admin::class,'dailyProfit'])->name('Admin.Daily.Profit');
+Route::get('/daily-Profit', [admin::class, 'dailyProfit'])->name('Admin.Daily.Profit')->middleware('admin');
 
 
 
