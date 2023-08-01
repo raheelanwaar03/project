@@ -135,6 +135,6 @@ class Project extends Controller
         }
         $data->save();
 
-        return redirect()->back()->with('success', 'Your package activated successfully');
+        return redirect()->back()->with('success', 'Your package activated successfully. First two widthrawal are free on Diamond & Platinum');
     }
 }
