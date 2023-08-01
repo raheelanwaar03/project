@@ -15,35 +15,35 @@ use App\Http\Controllers\admin;
 |
 */
 
-Route::get('/', [Project::class, 'index'])->name('Home');
+Route::get('/', [Project::class, 'index']);
 
-Route::get('/home', [Project::class, 'redirect'])->middleware('admin');
-Route::get('about', [Project::class, 'About'])->middleware('admin');
-Route::get('packages', [Project::class, 'Packages'])->middleware('admin');
-Route::get('contact', [Project::class, 'Contact'])->middleware('admin');
-Route::get('account', [Project::class, 'Account'])->middleware('admin');
-Route::get('r', [Project::class, 'R'])->middleware('admin');
-Route::get('accept', [Project::class, 'accept'])->middleware('admin');
-Route::get('reject', [Project::class, 'reject'])->middleware('admin');
-Route::get('Account', 'Project@Account')->middleware('admin');
+Route::get('/home', [Project::class, 'redirect'])->name('Home')->middleware('admin','user');
+Route::get('about', [Project::class, 'About'])->middleware('admin','user');
+Route::get('packages', [Project::class, 'Packages'])->middleware('admin','user');
+Route::get('contact', [Project::class, 'Contact'])->middleware('admin','user');
+Route::get('account', [Project::class, 'Account'])->middleware('admin','user');
+Route::get('r', [Project::class, 'R'])->middleware('admin','user');
+Route::get('accept', [Project::class, 'accept'])->middleware('admin','user');
+Route::get('reject', [Project::class, 'reject'])->middleware('admin','user');
+Route::get('Account', 'Project@Account')->middleware('admin','user');
 
-Route::Post('PackagesBuy', [Project::class, 'PackageBuy'])->middleware('admin');
+Route::Post('PackagesBuy', [Project::class, 'PackageBuy'])->middleware('admin','user');
 
-Route::post('PaymentRequest', [Project::class, 'PaymentRequest'])->middleware('admin');
-Route::post('WithdrawalRequest', [project::class, 'WithdrawalRequest'])->middleware('admin');
+Route::post('PaymentRequest', [Project::class, 'PaymentRequest'])->middleware('admin','user');
+Route::post('WithdrawalRequest', [project::class, 'WithdrawalRequest'])->middleware('admin','user');
 
 
-Route::get('Payment_User', [admin::class, 'addview'])->name('Admin.Users')->middleware('admin');
-Route::get('Withdrawal_User', [admin::class, 'addview1'])->middleware('admin');
+Route::get('Payment_User', [admin::class, 'addview'])->name('Admin.Users')->middleware('admin','user');
+Route::get('Withdrawal_User', [admin::class, 'addview1'])->middleware('admin','user');
 
-Route::get('Total_User', [admin::class, 'addview2'])->middleware('admin');
+Route::get('Total_User', [admin::class, 'addview2'])->middleware('admin','user');
 
-Route::get('/approved/{id}', [admin::class, 'approved'])->name('Admin.Approve.Payment')->middleware('admin');
-Route::get('/rejected/{id}', [admin::class, 'rejected'])->name('Admin.Rejected.Payment')->middleware('admin');
-Route::get('/approve/widthraw/{id}', [admin::class, 'approveWidthraw'])->name('Admin.Approve.Widthraw')->middleware('admin');
-Route::get('/reject/widthraw/{id}', [admin::class, 'rejecteWidthraw'])->name('Admin.Reject.Widthraw')->middleware('admin');
+Route::get('/approved/{id}', [admin::class, 'approved'])->name('Admin.Approve.Payment')->middleware('admin','user');
+Route::get('/rejected/{id}', [admin::class, 'rejected'])->name('Admin.Rejected.Payment')->middleware('admin','user');
+Route::get('/approve/widthraw/{id}', [admin::class, 'approveWidthraw'])->name('Admin.Approve.Widthraw')->middleware('admin','user');
+Route::get('/reject/widthraw/{id}', [admin::class, 'rejecteWidthraw'])->name('Admin.Reject.Widthraw')->middleware('admin','user');
 // giving all users thier daily profit
-Route::get('/daily-Profit', [admin::class, 'dailyProfit'])->name('Admin.Daily.Profit')->middleware('admin');
+Route::get('/daily-Profit', [admin::class, 'dailyProfit'])->name('Admin.Daily.Profit')->middleware('admin','user');
 
 
 
