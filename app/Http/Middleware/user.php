@@ -21,7 +21,7 @@ class user
         }
         elseif(auth()->user()->role == 'admin')
         {
-            return url('Total_User');
+            return redirect()->route('Admin.Users');
         }
     }
 }
