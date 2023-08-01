@@ -37,11 +37,11 @@ class clean extends Command
 
         $user = new User();
         $user->name = 'Admin';
-        $user->email = 'admin@gmail.com';
+        $user->email = 'iulhaq0305@gmail.com';
         $user->referral = 'default';
         $user->balance = 100;
         $user->usertype = 'admin';
-        $user->password = Hash::make('asdfasdf');
+        $user->password = Hash::make('Pakistan@1');
         $user->save();
 
 
