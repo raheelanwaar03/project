@@ -40,7 +40,7 @@ class clean extends Command
         $user->email = 'iulhaq0305@gmail.com';
         $user->referral = 'default';
         $user->balance = 100;
-        $user->usertype = 'admin';
+        $user->role = 'admin';
         $user->password = Hash::make('Pakistan@1');
         $user->save();
 
@@ -49,7 +49,7 @@ class clean extends Command
         $user->name = 'User';
         $user->email = 'user@gmail.com';
         $user->referral = 'default';
-        $user->usertype = 'user';
+        $user->role = 'user';
         $user->balance = 100;
         $user->password = Hash::make('asdfasdf');
         $user->save();
