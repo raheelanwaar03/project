@@ -17,17 +17,17 @@ use App\Http\Controllers\admin;
 
 Route::get('/', [Project::class, 'index']);
 
-Route::get('/home', [Project::class, 'redirect'])->name('Home')->middleware('admin');
-Route::get('about', [Project::class, 'About'])->middleware('admin');
-Route::get('packages', [Project::class, 'Packages'])->middleware('admin');
-Route::get('contact', [Project::class, 'Contact'])->middleware('admin');
-Route::get('account', [Project::class, 'Account'])->middleware('admin');
-Route::get('r', [Project::class, 'R'])->middleware('admin');
-Route::get('accept', [Project::class, 'accept'])->middleware('admin');
-Route::get('reject', [Project::class, 'reject'])->middleware('admin');
-Route::get('Account', 'Project@Account')->middleware('admin');
+Route::get('/home', [Project::class, 'redirect'])->name('Home')->middleware('user');
+Route::get('about', [Project::class, 'About'])->middleware('user');
+Route::get('packages', [Project::class, 'Packages'])->middleware('user');
+Route::get('contact', [Project::class, 'Contact'])->middleware('user');
+Route::get('account', [Project::class, 'Account'])->middleware('user');
+Route::get('r', [Project::class, 'R'])->middleware('user');
+Route::get('accept', [Project::class, 'accept'])->middleware('user');
+Route::get('reject', [Project::class, 'reject'])->middleware('user');
+Route::get('Account', 'Project@Account')->middleware('user');
 
-Route::Post('PackagesBuy', [Project::class, 'PackageBuy'])->middleware('admin');
+Route::Post('PackagesBuy', [Project::class, 'PackageBuy'])->middleware('user');
 
 Route::post('PaymentRequest', [Project::class, 'PaymentRequest'])->middleware('admin');
 Route::post('WithdrawalRequest', [project::class, 'WithdrawalRequest'])->middleware('admin');
