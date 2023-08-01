@@ -33,7 +33,7 @@ Route::post('PaymentRequest', [Project::class, 'PaymentRequest'])->middleware('a
 Route::post('WithdrawalRequest', [project::class, 'WithdrawalRequest'])->middleware('admin');
 
 
-Route::get('Payment_User', [admin::class, 'addview'])->middleware('admin');
+Route::get('Payment_User', [admin::class, 'addview'])->name('Admin.Users')->middleware('admin');
 Route::get('Withdrawal_User', [admin::class, 'addview1'])->middleware('admin');
 
 Route::get('Total_User', [admin::class, 'addview2'])->middleware('admin');
