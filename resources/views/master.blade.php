@@ -83,13 +83,7 @@
                                     </div>
                                     <div class="news">
                                         <marquee>
-                                            <p class="info" style="color: white; ">Lorem ipsum dolor, sit amet
-                                                consectetur adipisicing elit. Omnis ipsam laborum suscipit blanditiis,
-                                                voluptate est molestiae architecto soluta? Perferendis nobis, aspernatur
-                                                recusandae a nisi enim excepturi consequuntur optio provident
-                                                omnis qui neque amet. Maiores, a! Quibusdam corporis adipisci dicta
-                                                doloremque, consequatur quae nisi magni, obcaecati natus quisquam
-                                                reiciendis, dolore neque?</p>
+                                            <p class="info" style="color: white; ">Get first 2 withdrawals free on purchase of Diamond and Platinum package</p>
                                         </marquee>
                                     </div>
                                 </div>

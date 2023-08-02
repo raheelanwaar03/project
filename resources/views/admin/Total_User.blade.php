@@ -41,6 +41,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Balance</th>
+                <th>Referral</th>
                 <th>Registration Date</th>
             </tr>
                 </thead>
@@ -50,6 +51,7 @@
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->balance }}</td>
+                    <td>{{ $user->referral }}</td>
                     <td>{{ $user->created_at }}</td>
                 </tr>
             @endforeach
