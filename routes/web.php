@@ -17,8 +17,8 @@ use App\Http\Controllers\admin;
 
 Route::get('/', [Project::class, 'index']);
 
-Route::get('/home', [Project::class, 'redirect'])->name('Home')->middleware('user');
-Route::get('about', [Project::class, 'About'])->middleware('user');
+Route::get('/home', [Project::class, 'redirect'])->name('Home');
+Route::get('about', [Project::class, 'About']);
 Route::get('packages', [Project::class, 'Packages'])->middleware('user');
 Route::get('contact', [Project::class, 'Contact'])->middleware('user');
 Route::get('account', [Project::class, 'Account'])->middleware('user');
