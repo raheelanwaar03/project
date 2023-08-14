@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('payment_requests', function (Blueprint $table) {
             $table->id();
-            $table->string('Full_Name')->nullable();
-            $table->string('Email')->nullable();
-            $table->string('Phone_No')->nullable();
-            $table->string('TRC20_ID')->nullable();
-            $table->string('Recharge_Amount')->nullable();
-            $table->string('Screen_shot')->nullable();
-            $table->string('Action')->nullable();
+            $table->string('name')->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('payment_id')->nullable();
+            $table->string('payment_amount')->nullable();
+            $table->string('file')->nullable();
+            $table->string('action')->nullable();
             $table->string('user_id')->nullable();
 
             $table->timestamps();

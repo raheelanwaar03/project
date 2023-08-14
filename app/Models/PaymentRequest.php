@@ -12,6 +12,6 @@ class PaymentRequest extends Model
     protected $table = 'payment_requests';
 
     protected $fillable = [
-        'Full_Name', 'Email', 'Phone_No', 'TRC20_ID', 'Recharge_Amount', 'image','user_id'
+        'name', 'email', 'phone', 'payment_id', 'payment_amount', 'file','user_id'
     ];
 }

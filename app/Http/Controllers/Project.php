@@ -54,19 +54,29 @@ class Project extends Controller
     }
     public function PaymentRequest(Request $request)
     {
+
+        $validated = $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'payment_id' => 'required',
+            'payment_amount' => 'required',
+            'file' => 'required',
+        ]);
+
         $data = new PaymentRequest;
-        $data->Full_Name = $request->name;
-        $data->Email = $request->email;
-        $data->Phone_No = $request->phone;
-        $data->TRC20_ID = $request->payment_id;
-        $data->Recharge_Amount = $request->Payment_Amount;
+        $data->name = $validated['name'];
+        $data->email = $validated['email'];
+        $data->phone = $validated['phone'];
+        $data->payment_id = $validated['payment_id'];
+        $data->payment_amount = $validated['payment_amount'];
         if ($request->has('file')) {
             $image = $request['file'];
             $imageName = rand(111111, 999999) . '.' . $image->getClientOriginalExtension();
             $image->move(public_path('images'), $imageName);
-            $data->Screen_shot = $imageName;
+            $data->file = $imageName;
         }
-        $data->Action = 'In Progress';
+        $data->action = 'In Progress';
         if (Auth::check()) {
             $data->user_id = Auth::user()->id;
         }

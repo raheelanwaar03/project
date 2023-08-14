@@ -29,8 +29,8 @@ Route::get('Account', 'Project@Account')->middleware('user');
 
 Route::Post('PackagesBuy', [Project::class, 'PackageBuy'])->middleware('user');
 
-Route::post('PaymentRequest', [Project::class, 'PaymentRequest'])->middleware('admin');
-Route::post('WithdrawalRequest', [project::class, 'WithdrawalRequest'])->middleware('admin');
+Route::post('PaymentRequest', [Project::class, 'PaymentRequest'])->middleware('user');
+Route::post('WithdrawalRequest', [project::class, 'WithdrawalRequest'])->middleware('user');
 
 
 Route::get('Payment_User', [admin::class, 'addview'])->name('Admin.Users')->middleware('admin');

@@ -2,8 +2,6 @@
 @section('tittle', 'Account')
 
 
-
-
 @section('content')
     <style>
         .details #pills-tab {
@@ -419,7 +417,7 @@
                                                 <br>
                                                 <br>
                                                 <div class="form-group">
-                                                    <label for="Payment_Amount"><i class="fa fa-user"></i> TRC20
+                                                    <label><i class="fa fa-user"></i> TRC20
                                                         Address:</label>
                                                     <div class="d-flex justify-content-center align-items-center">
                                                         <input type="text" name="payment_id"
@@ -428,14 +426,14 @@
                                                         <a onclick="copyWallet()" style='margin-top: -26px;'>Copy</a>
                                                     </div>
                                                 </div>
-                                                <label for="Payment_Amount"><i class="fa fa-user"></i> Payment
+                                                <label for="payment_amount"><i class="fa fa-user"></i> Payment
                                                     Amount:</label>
-                                                <input type="number" id="Payment_Amount" name="Payment_Amount"
+                                                <input type="number" id="payment_amount" name="payment_amount"
                                                     placeholder="Enter Payment Amount">
                                                 <br>
-                                                <label for="Screen Shot"> Screen Shot:</label>
+                                                <label for="file"> Screen Shot:</label>
                                                 <br>
-                                                <input type="File" name="file">
+                                                <input type="file" name="file">
                                                 <br>
                                                 <br>
                                             </div>
