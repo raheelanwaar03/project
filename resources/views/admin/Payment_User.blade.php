@@ -57,16 +57,16 @@
                         @foreach ($data as $data)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $data->Full_Name }}</td>
-                                <td>{{ $data->Email }}</td>
-                                <td>{{ $data->Phone_No }}</td>
-                                <td>{{ $data->TRC20_ID }}</td>
-                                <td>{{ $data->Recharge_Amount }}</td>
-                                <td><img src="{{ asset('images/' . $data->Screen_shot) }}" alt="Image"
+                                <td>{{ $data->name }}</td>
+                                <td>{{ $data->email }}</td>
+                                <td>{{ $data->phone }}</td>
+                                <td>{{ $data->payment_id }}</td>
+                                <td>{{ $data->payment_amount }}</td>
+                                <td><img src="{{ asset('images/' . $data->file) }}" alt="Image"
                                         class="img-fluid img-responsive" height="50px" width="50px"></td>
                                 <td>{{ $data->user_id }}</td>
                                 <td>{{ $data->created_at }}</td>
-                                <td>{{ $data->Action }} </td>
+                                <td>{{ $data->action }} </td>
                                 <td><a class="btn btn-success py-2"
                                         href="{{ route('Admin.Approve.Payment', $data->id) }}">Approve</a></td>
                                 <td><a class="btn btn-danger py-2"

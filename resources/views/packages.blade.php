@@ -35,7 +35,7 @@
                         <div class="single-card text-center mb-30">
                             <div class="uk-width-1-4">
                                 <div class="pricing-package">
-                                    <form action="" data-toggle="validator" role="form" id="stForm"
+                                    <form action="{{ url('PackagesBuy') }}" data-toggle="validator" role="form" id="stForm"
                                         enctype="multipart/form-data" method="post" accept-charset="utf-8">
                                         <input type="text" value="starter" name="Silver Package1" hidden="">
                                         <input type="text" value="10" name="price" hidden="">
@@ -60,7 +60,15 @@
                                     <li>Minimum Withdrawal: 5$</li>
                                     <li>Total Earnings After 180 days: 72$</li>
                                 </ul>
+                                @if (auth()->user())
+                                @if (auth()->user())
                                 <button class="border-btn" type="submit" @guest disabled @endguest>BUY NOW</button>
+                                @else
+                                <a href="{{ route('register') }}" class="border-btn">BUY NOW</a>
+                                @endif
+                                @else
+                                <a href="{{ route('register') }}" class="border-btn">BUY NOW</a>
+                                @endif
 
                             </div>
                         </div>
@@ -95,7 +103,11 @@
                                     <li>Minimum Withdrawal: 10$</li>
                                     <li>Total After 180 days: 216$</li>
                                 </ul>
+                                @if (auth()->user())
                                 <button class="border-btn" type="submit" @guest disabled @endguest>BUY NOW</button>
+                                @else
+                                <a href="{{ route('register') }}" class="border-btn">BUY NOW</a>
+                                @endif
                                 </form>
                             </div>
                         </div>
@@ -132,7 +144,11 @@
                                     <li>Minimum Withdrawal: 20$</li>
                                     <li>Total After 180 Days: 540$</li>
                                 </ul>
+                                @if (auth()->user())
                                 <button class="border-btn" type="submit" @guest disabled @endguest>BUY NOW</button>
+                                @else
+                                <a href="{{ route('register') }}" class="border-btn">BUY NOW</a>
+                                @endif
                             </div>
                             </form>
                         </div>
@@ -171,7 +187,11 @@
                                     <li>Minimum Withdrawal: 50$</li>
                                     <li>Total After 180 Days: 1080$</li>
                                 </ul>
+                                @if (auth()->user())
                                 <button class="border-btn" type="submit" @guest disabled @endguest>BUY NOW</button>
+                                @else
+                                <a href="{{ route('register') }}" class="border-btn">BUY NOW</a>
+                                @endif
                                 </form>
                             </div>
                         </div>
@@ -209,7 +229,11 @@
                                     <li>Total After 180 Days: $5400</li>
                                 </ul>
 
+                                @if (auth()->user())
                                 <button class="border-btn" type="submit" @guest disabled @endguest>BUY NOW</button>
+                                @else
+                                <a href="{{ route('register') }}" class="border-btn">BUY NOW</a>
+                                @endif
                                 </button> </form>
                             </div>
                         </div>
@@ -247,7 +271,11 @@
                                         <li>Minimum Withdrawal: 500$</li>
                                         <li>Total After 200 days: 12000$</li>
                                     </ul>
-                                    <button class="border-btn" type="submit" @guest disabled @endguest>BUY NOW</button>
+                                    @if (auth()->user())
+                                <button class="border-btn" type="submit" @guest disabled @endguest>BUY NOW</button>
+                                @else
+                                <a href="{{ route('register') }}" class="border-btn">BUY NOW</a>
+                                @endif
                                     </button>
                                 </div>
                                 </form>
