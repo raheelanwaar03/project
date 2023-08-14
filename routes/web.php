@@ -19,8 +19,8 @@ Route::get('/', [Project::class, 'index']);
 
 Route::get('/home', [Project::class, 'redirect'])->name('Home');
 Route::get('about', [Project::class, 'About']);
-Route::get('packages', [Project::class, 'Packages'])->middleware('user');
-Route::get('contact', [Project::class, 'Contact'])->middleware('user');
+Route::get('packages', [Project::class, 'Packages']);
+Route::get('contact', [Project::class, 'Contact']);
 Route::get('account', [Project::class, 'Account'])->middleware('user');
 Route::get('r', [Project::class, 'R'])->middleware('user');
 Route::get('accept', [Project::class, 'accept'])->middleware('user');
