@@ -35,15 +35,14 @@ class admin extends Controller
     }
     public function approved($id)
     {
-
         $data = PaymentRequest::find($id);
         $data->Action = 'Approved';
         $data->save();
         // getting data for adding user balance
-        $amount = $data->Recharge_Amount;
+        $amount = $data->payment_amount;
         $userId = $data->user_id;
         // adding amount to user balance
-        $user = User::where('id', $userId)->first();
+        $user = User::find($userId);
         $user->balance += $amount;
         $user->save();
         // 25% of amount
@@ -55,7 +54,7 @@ class admin extends Controller
             $upliner->save();
         }
 
-        return redirect()->back();
+        return redirect()->back()->with('success','User deposite request has been approved');
     }
 
     public function rejected($id)

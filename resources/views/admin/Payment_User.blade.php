@@ -22,7 +22,25 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.semanticui.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.semanticui.min.css">
 
+    <style>
+        /* Styling to make the image full-screen */
+        #fullscreen-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
 
+        #fullscreen-image img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    </style>
 
 
 </head>
@@ -62,8 +80,16 @@
                                 <td>{{ $data->phone }}</td>
                                 <td>{{ $data->payment_id }}</td>
                                 <td>{{ $data->payment_amount }}</td>
-                                <td><img src="{{ asset('images/' . $data->file) }}" alt="Image"
-                                        class="img-fluid img-responsive" height="50px" width="50px"></td>
+                                <td>
+
+                                    <img src="{{ asset('images/' . $data->file) }}" alt="Image"
+                                        class="img-fluid img-responsive" height="50px" width="50px"
+                                        onclick="showFullscreenImage(this)">
+
+                                    <div id="fullscreen-image" onclick="hideFullscreenImage()">
+                                        <img src="{{ asset('images/' . $data->file) }}" alt="Fullscreen Image">
+                                    </div>
+                                </td>
                                 <td>{{ $data->user_id }}</td>
                                 <td>{{ $data->created_at }}</td>
                                 <td>{{ $data->action }} </td>
@@ -73,14 +99,9 @@
                                         href="{{ route('Admin.Rejected.Payment', $data->id) }}">Reject</a></td>
                             </tr>
                         @endforeach
-
                     </tbody>
-
                 </table>
-
-
             </div>
-
         </div>
     </div>
 
@@ -139,6 +160,19 @@
     <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.mjs"></script>
     <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.mjs"></script>
     <script src="https://cdn.datatables.net/buttons/2.4.1/importmap.json"></script>
+
+    <script>
+        function showFullscreenImage(imageElement) {
+            const fullscreenImage = document.querySelector("#fullscreen-image img");
+            fullscreenImage.src = imageElement.src;
+            document.getElementById("fullscreen-image").style.display = "flex";
+        }
+
+        function hideFullscreenImage() {
+            document.getElementById("fullscreen-image").style.display = "none";
+        }
+    </script>
+
     <script>
         $(document).ready(function() {
             $('#myTable').DataTable({
