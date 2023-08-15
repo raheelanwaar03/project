@@ -73,17 +73,17 @@
                         </div>
                     </div>
                     <!-- <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="single-cat">
-                            <div class="cat-icon">
-                                <img src="assets/img/icon/wallet.png" width="60px" height="60px" alt="">
+                            <div class="single-cat">
+                                <div class="cat-icon">
+                                    <img src="assets/img/icon/wallet.png" width="60px" height="60px" alt="">
+                                </div>
+                                <div class="cat-cap">
+                                    <h5><a href="#">Wallet</a></h5>
+                                    <p>At [Company Name], we understand the importance of keeping your digital assets safe and secure. That's why we offer a state-of-the-art crypto wallet specifically
+                                        designed for USDT miners.Our wallet provides you with a convenient.</p>
+                                </div>
                             </div>
-                            <div class="cat-cap">
-                                <h5><a href="#">Wallet</a></h5>
-                                <p>At [Company Name], we understand the importance of keeping your digital assets safe and secure. That's why we offer a state-of-the-art crypto wallet specifically
-                                    designed for USDT miners.Our wallet provides you with a convenient.</p>
-                            </div>
-                        </div>
-                    </div> -->
+                        </div> -->
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="single-cat">
                             <div class="cat-icon">
@@ -114,32 +114,33 @@
                         </div>
                     </div>
                     <!-- <div class="col-lg-4 col-md-4 col-sm-6">
-                        <div class="single-cat">
-                            <div class="cat-icon">
-                                <img src="assets/img/icon/subscription.png" width="60px" height="60px" alt="">
+                            <div class="single-cat">
+                                <div class="cat-icon">
+                                    <img src="assets/img/icon/subscription.png" width="60px" height="60px" alt="">
+                                </div>
+                                <div class="cat-cap">
+                                    <h5><a href="#">Recurring Buys</a></h5>
+                                    <p>At [Company Name], we understand the importance of consistent and strategic investments in the world of crypto mining. That's why we offer a convenient Recurring Buy feature, designed to simplify your investment process and help you maximize your mining potential.</p>
+                                </div>
                             </div>
-                            <div class="cat-cap">
-                                <h5><a href="#">Recurring Buys</a></h5>
-                                <p>At [Company Name], we understand the importance of consistent and strategic investments in the world of crypto mining. That's why we offer a convenient Recurring Buy feature, designed to simplify your investment process and help you maximize your mining potential.</p>
-                            </div>
-                        </div>
-                    </div> -->
+                        </div> -->
                     <!-- <div class="col-lg-4 col-md-4 col-sm-6">
-                        <!-- <div class="single-cat">
-                            <div class="cat-icon">
-                                <img src="assets/img/icon/currency-exchange.png " width="60px" height="60px" alt="">
-                            </div> -->
+                            <!-- <div class="single-cat">
+                                <div class="cat-icon">
+                                    <img src="assets/img/icon/currency-exchange.png " width="60px" height="60px" alt="">
+                                </div> -->
                     <!-- <div class="cat-cap">
-                                <h5><a href="#">Instant Exchange</a></h5>
-                                <p>At [Company Name], we offer an Instant Exchange feature that enables you to quickly and effortlessly convert your crypto assets into different cryptocurrencies or traditional
-                                    fiat currencies. With our user-friendly platform, you can enjoy the convenience and flexibility of instant conversions.</p>
-                            </div> -->
+                                    <h5><a href="#">Instant Exchange</a></h5>
+                                    <p>At [Company Name], we offer an Instant Exchange feature that enables you to quickly and effortlessly convert your crypto assets into different cryptocurrencies or traditional
+                                        fiat currencies. With our user-friendly platform, you can enjoy the convenience and flexibility of instant conversions.</p>
+                                </div> -->
                 </div>
             </div> -->
 
             </div>
             </div>
         </section>
+
         <!-- Services End -->
         <!--? Pricing Card Start -->
         <section class="pricing-card-area fix">
@@ -171,7 +172,7 @@
                                     <li>Minimum Withdrawal 5$ </li>
                                     <li>Total Earnings After 180 days : 72$</li>
                                     <!-- <li>free domain</li>
-                                    <li>unlimited database</li> -->
+                                        <li>unlimited database</li> -->
                                 </ul>
                                 <a href="#" class="borders-btn">Get Started</a>
                             </div>
@@ -193,7 +194,7 @@
                                     <li>Minimum Withdrawal 50$</li>
                                     <li>total after 180 days : 1080$</li>
                                     <!-- <li>free domain</li>
-                                    <li>unlimited database</li> -->
+                                        <li>unlimited database</li> -->
                                 </ul>
                                 <a href="#" class="borders-btn">Get Started</a>
                             </div>
@@ -215,7 +216,7 @@
                                     <li>Minimum Withdrawal 50$</li>
                                     <li>Total After 220 days: 26400 $</li>
                                     <!-- <li>free domain</li>
-                                    <li>unlimited database</li> -->
+                                        <li>unlimited database</li> -->
                                 </ul>
                                 <a href="#" class="borders-btn">Get Started</a>
                             </div>
@@ -224,6 +225,26 @@
                 </div>
             </div>
         </section>
+
+        {{-- adding slider here --}}
+        <div class="text-center">
+            <h1 class="display-4 my-5" >Widthrawal Screen shots</h1>
+        </div>
+        <div class="autoplay">
+            <div class="">
+                <img src="{{ asset('assets/img/ss.jpeg') }}" alt="logo" height="300px" width="300px">
+            </div>
+            <div class="">
+                <img src="{{ asset('assets/img/ss2.jpeg') }}" alt="logo" height="300px" width="300px">
+            </div>
+            <div class="">
+                <img src="{{ asset('assets/img/ss1.jpeg') }}" alt="logo" height="300px" width="300px">
+            </div>
+            <div class="">
+                <img src="{{ asset('assets/img/ss3.jpeg') }}" alt="logo" height="300px" width="300px">
+            </div>
+        </div>
+
         <!-- Pricing Card End -->
         <!--? About-1 Area Start -->
         <div class="about-area1 section-padding40">

@@ -27,12 +27,19 @@
     <link rel="stylesheet" href="{{ asset('assets/css/nice-select.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
 
     <header>
-        <x-alert/>
+        <x-alert />
 
         <!-- Header Start -->
         <div class="header-area header-transparent">
@@ -83,7 +90,8 @@
                                     </div>
                                     <div class="news">
                                         <marquee>
-                                            <p class="info" style="color: white; ">Get first 2 withdrawals free on purchase of Diamond and Platinum package</p>
+                                            <p class="info" style="color: white; ">Get first 2 withdrawals free on
+                                                purchase of Diamond and Platinum package</p>
                                         </marquee>
                                     </div>
                                 </div>
@@ -125,7 +133,8 @@
                                     <div id="mc_embed_signup">
                                         <form target="_blank"
                                             action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                            method="get" class="subscribe_form relative mail_part" novalidate="true">
+                                            method="get" class="subscribe_form relative mail_part"
+                                            novalidate="true">
                                             <input type="email" name="EMAIL" id="newsletter-form-email"
                                                 placeholder=" Email Address " class="placeholder hide-on-focus"
                                                 onfocus="this.placeholder = ''"
@@ -224,6 +233,14 @@
     <script src="{{ asset('assets/js/mail-script.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.ajaxchimp.min.js') }}"></script>
 
+    {{-- adding slider --}}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
     <!-- Jquery Plugins, main Jquery -->
     <script src="{{ asset('assets/js/plugins.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
@@ -239,6 +256,18 @@
     <script>
         "{{ asset('assets/uikit/js/uikit-icons.min.js') }}"
     </script>
+
+    <script>
+
+$('.autoplay').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});
+
+    </script>
+
 </body>
 
 </html>
