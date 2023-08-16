@@ -43,7 +43,6 @@
                                         <input type="text" value="0.4" name="Daily Income" hidden="">
                                         <input type="text" value="5" name="Minimum Withdrawal" hidden="">
                                         <input type="text" value="72" name="Total After 180 Days" hidden="">
-                                    </form>
                                 </div>
                             </div>
                             <div class="card-top">
@@ -66,6 +65,7 @@
                                 <a href="{{ route('register') }}" class="border-btn">BUY NOW</a>
                                 @endif
                             </div>
+                            </form>
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
