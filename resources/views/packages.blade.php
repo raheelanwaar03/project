@@ -37,6 +37,7 @@
                                 <div class="pricing-package">
                                     <form action="{{ url('PackagesBuy') }}" data-toggle="validator" role="form" id="stForm"
                                         enctype="multipart/form-data" method="post" accept-charset="utf-8">
+                                        @csrf
                                         <input type="text" value="starter" name="Silver Package1" hidden="">
                                         <input type="text" value="10" name="price" hidden="">
                                         <input type="text" value="180" name="Days" hidden="">
