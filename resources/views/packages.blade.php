@@ -61,15 +61,10 @@
                                     <li>Total Earnings After 180 days: 72$</li>
                                 </ul>
                                 @if (auth()->user())
-                                @if (auth()->user())
                                 <button class="border-btn" type="submit" @guest disabled @endguest>BUY NOW</button>
                                 @else
                                 <a href="{{ route('register') }}" class="border-btn">BUY NOW</a>
                                 @endif
-                                @else
-                                <a href="{{ route('register') }}" class="border-btn">BUY NOW</a>
-                                @endif
-
                             </div>
                         </div>
                     </div>
