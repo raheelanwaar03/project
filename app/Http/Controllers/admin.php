@@ -54,7 +54,7 @@ class admin extends Controller
             $upliner->save();
         }
 
-        return redirect()->back()->with('success','User deposite request has been approved');
+        return redirect()->back()->with('success', 'User deposite request has been approved');
     }
 
     public function rejected($id)
@@ -90,6 +90,9 @@ class admin extends Controller
     public function dailyProfit()
     {
         $packages = Packages::get();
+        if ($packages == null) {
+            return redirect()->back()->with('error', 'No one buy any package');
+        }
 
         foreach ($packages as $data) {
 
@@ -97,15 +100,17 @@ class admin extends Controller
             $package = Packages::where('user_id', $data->user_id)->where('created_at', '>', Carbon::today()->subDays(180));
             // giving user daily profit
             $user = User::where('id', $data->user_id)->first();
-            $user->balance += $data->Daily_income;
-            $user->save();
-
-            // adding user daily income in database
-            $daily_profit = new DailyProfit();
-            $daily_profit->user_id = $data->user_id;
-            $daily_profit->amount = $data->Daily_income;
-            $daily_profit->action = 'Daily Profit';
-            $daily_profit->save();
+            $user_check =  DailyProfit::where('user_id', $user->id)->where('created_at', Carbon::today())->get();
+            if ($user_check == null) {
+                $user->balance += $data->Daily_income;
+                $user->save();
+                // adding user daily income in database
+                $daily_profit = new DailyProfit();
+                $daily_profit->user_id = $data->user_id;
+                $daily_profit->amount = $data->Daily_income;
+                $daily_profit->action = 'Daily Profit';
+                $daily_profit->save();
+            }
         }
 
 

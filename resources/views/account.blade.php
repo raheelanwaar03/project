@@ -297,16 +297,16 @@
 
                                     @if (auth()->user())
                                         <div class="balance text-white">
-                                            Your Current balance: ({{ auth()->user()->balance }})
+                                            Your Current balance: (${{ auth()->user()->balance }})
                                         </div>
                                     @else
                                         <div class="balance text-white">
-                                            Your Current balance: (0)
+                                            Your Current balance: ($0)
                                         </div>
                                     @endif
 
                                     <div class="text-white">
-                                        Profit and Loss: {{ dailyProfit() }}
+                                        Profit : {{ dailyProfit() }}
                                     </div>
                                 </div>
                             </div>
