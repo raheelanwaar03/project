@@ -306,7 +306,7 @@
                                     @endif
 
                                     <div class="text-white">
-                                        Profit : {{ dailyProfit() }}
+                                        Profit : {{ (dailyProfit()$) }}
                                     </div>
                                 </div>
                             </div>

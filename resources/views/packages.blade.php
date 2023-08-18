@@ -161,7 +161,7 @@
                                         accept-charset="utf-8">
                                         @csrf
                                         <input type="text" value="Gold_Package2" name="Package_name" hidden="">
-                                        <input type="text" value="100" name="price" hidden="">
+                                        <input type="text" name="price" value="100" hidden>
                                         <input type="text" value="180" name="Days" hidden="">
                                         <input type="text" value="6" name="Daily Income" hidden="">
                                         <input type="text" value="50" name="Minimum Withdrawal" hidden="">
