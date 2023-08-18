@@ -99,7 +99,7 @@ class admin extends Controller
             // getting user buy package details
             $package = Packages::where('user_id', $data->user_id)->where('created_at', '>', Carbon::today()->subDays(180));
             // giving user daily profit
-            $user = User::where('id', $data->user_id)->first();
+            $user = User::where('id', $package->user_id)->first();
             $user_check =  DailyProfit::where('user_id', $user->user_id)->where('created_at', Carbon::today())->get();
             if ($user_check == null) {
                 $user->balance += $data->Daily_income;
