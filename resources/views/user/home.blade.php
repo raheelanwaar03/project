@@ -71,17 +71,17 @@
                         </div>
                     </div>
                     <!-- <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="single-cat">
-                                <div class="cat-icon">
-                                    <img src="assets/img/icon/wallet.png" width="60px" height="60px" alt="">
+                                <div class="single-cat">
+                                    <div class="cat-icon">
+                                        <img src="assets/img/icon/wallet.png" width="60px" height="60px" alt="">
+                                    </div>
+                                    <div class="cat-cap">
+                                        <h5><a href="#">Wallet</a></h5>
+                                        <p>At [Company Name], we understand the importance of keeping your digital assets safe and secure. That's why we offer a state-of-the-art crypto wallet specifically
+                                            designed for USDT miners.Our wallet provides you with a convenient.</p>
+                                    </div>
                                 </div>
-                                <div class="cat-cap">
-                                    <h5><a href="#">Wallet</a></h5>
-                                    <p>At [Company Name], we understand the importance of keeping your digital assets safe and secure. That's why we offer a state-of-the-art crypto wallet specifically
-                                        designed for USDT miners.Our wallet provides you with a convenient.</p>
-                                </div>
-                            </div>
-                        </div> -->
+                            </div> -->
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="single-cat">
                             <div class="cat-icon">
@@ -112,26 +112,26 @@
                         </div>
                     </div>
                     <!-- <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="single-cat">
-                                <div class="cat-icon">
-                                    <img src="assets/img/icon/subscription.png" width="60px" height="60px" alt="">
+                                <div class="single-cat">
+                                    <div class="cat-icon">
+                                        <img src="assets/img/icon/subscription.png" width="60px" height="60px" alt="">
+                                    </div>
+                                    <div class="cat-cap">
+                                        <h5><a href="#">Recurring Buys</a></h5>
+                                        <p>At [Company Name], we understand the importance of consistent and strategic investments in the world of crypto mining. That's why we offer a convenient Recurring Buy feature, designed to simplify your investment process and help you maximize your mining potential.</p>
+                                    </div>
                                 </div>
-                                <div class="cat-cap">
-                                    <h5><a href="#">Recurring Buys</a></h5>
-                                    <p>At [Company Name], we understand the importance of consistent and strategic investments in the world of crypto mining. That's why we offer a convenient Recurring Buy feature, designed to simplify your investment process and help you maximize your mining potential.</p>
-                                </div>
-                            </div>
-                        </div> -->
+                            </div> -->
                     <!-- <div class="col-lg-4 col-md-4 col-sm-6">
-                            <!-- <div class="single-cat">
-                                <div class="cat-icon">
-                                    <img src="assets/img/icon/currency-exchange.png " width="60px" height="60px" alt="">
-                                </div> -->
+                                <!-- <div class="single-cat">
+                                    <div class="cat-icon">
+                                        <img src="assets/img/icon/currency-exchange.png " width="60px" height="60px" alt="">
+                                    </div> -->
                     <!-- <div class="cat-cap">
-                                    <h5><a href="#">Instant Exchange</a></h5>
-                                    <p>At [Company Name], we offer an Instant Exchange feature that enables you to quickly and effortlessly convert your crypto assets into different cryptocurrencies or traditional
-                                        fiat currencies. With our user-friendly platform, you can enjoy the convenience and flexibility of instant conversions.</p>
-                                </div> -->
+                                        <h5><a href="#">Instant Exchange</a></h5>
+                                        <p>At [Company Name], we offer an Instant Exchange feature that enables you to quickly and effortlessly convert your crypto assets into different cryptocurrencies or traditional
+                                            fiat currencies. With our user-friendly platform, you can enjoy the convenience and flexibility of instant conversions.</p>
+                                    </div> -->
                 </div>
             </div> -->
 
@@ -146,10 +146,20 @@
                 <div class="row justify-content-center">
                     <div class="col-xl-8 col-lg-8">
                         <div class="section-tittle text-center mb-90">
-                            <h2>Choose plan which fit for you</h2>
-                            <p>Supercharge your WordPress hosting with detailed website analytics, marketing tools. Our
-                                experts are just part of the reason Bluehost is the ideal home for your WordPress website.
-                                We're here to help you succeed!</p>
+                            <h2>How to buy packages?</h2>
+                            <p>
+                                Step 1: You have to buy USDT from any exchange like Binance, Kucoin, Bybit etc.
+                                <br>
+                                Step 2: Register an account on the website.
+                                <br>
+                                Step 3: Go to your account and then fill the deposit form and send the required amount
+                                of USDT to the TRC20 address given on the deposit form.
+                                <br>
+                                Step 4: Your account will be deposited with the balance in less than 24 hours.
+                                <br>
+                                Step 5: Then go to packages and buy any investment package you want.
+                                <br>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -170,7 +180,7 @@
                                     <li>Minimum Withdrawal 5$ </li>
                                     <li>Total Earnings After 180 days : 72$</li>
                                     <!-- <li>free domain</li>
-                                        <li>unlimited database</li> -->
+                                            <li>unlimited database</li> -->
                                 </ul>
                                 <a href="#" class="borders-btn">Get Started</a>
                             </div>
@@ -192,7 +202,7 @@
                                     <li>Minimum Withdrawal 50$</li>
                                     <li>total after 180 days : 1080$</li>
                                     <!-- <li>free domain</li>
-                                        <li>unlimited database</li> -->
+                                            <li>unlimited database</li> -->
                                 </ul>
                                 <a href="#" class="borders-btn">Get Started</a>
                             </div>
@@ -214,7 +224,7 @@
                                     <li>Minimum Withdrawal 50$</li>
                                     <li>Total After 220 days: 26400 $</li>
                                     <!-- <li>free domain</li>
-                                        <li>unlimited database</li> -->
+                                            <li>unlimited database</li> -->
                                 </ul>
                                 <a href="#" class="borders-btn">Get Started</a>
                             </div>
@@ -226,7 +236,7 @@
 
         {{-- adding slider here --}}
         <div class="text-center">
-            <h1 class="display-4 my-5" >Widthrawal Screen shots</h1>
+            <h1 class="display-4 my-5">Widthrawal Screen shots</h1>
         </div>
         <div class="autoplay">
             <div class="">
@@ -446,7 +456,7 @@
         integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-          {{-- adding slider --}}
+    {{-- adding slider --}}
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
