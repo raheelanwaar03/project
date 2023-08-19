@@ -101,7 +101,7 @@ class admin extends Controller
             // giving user daily profit
             $user = User::where('id', $data->user_id)->first();
             $user_check =  DailyProfit::where('user_id', $user->user_id)->where('created_at', Carbon::today())->get();
-            if ($user_check == null) {
+            if ($user_check = '') {
                 $user->balance += $data->Daily_income;
                 $user->save();
                 // adding user daily income in database
