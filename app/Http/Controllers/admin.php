@@ -97,12 +97,13 @@ class admin extends Controller
         foreach ($packages as $data) {
 
             // getting user buy package details
-            $package = Packages::where('user_id', $data->user_id)->where('created_at', '>', Carbon::today()->subDays(180));
+            $package = Packages::where('user_id', $data->user_id)->where('created_at', '>', Carbon::today()->subDays(180))->first();
+            $daily_income = $package->Daily_income;
             // giving user daily profit
             $user = User::where('id', $data->user_id)->first();
-            $user_check =  DailyProfit::where('user_id', $user->user_id)->where('created_at', Carbon::today())->get();
-            if ($user_check = '') {
-                $user->balance += $data->Daily_income;
+            $user_check =  DailyProfit::where('user_id', $user->id)->where('created_at', Carbon::today())->first();
+            if ($user_check == '') {
+                $user->balance += $daily_income;
                 $user->save();
                 // adding user daily income in database
                 $daily_profit = new DailyProfit();
