@@ -107,7 +107,7 @@ class admin extends Controller
                 $user->save();
                 // adding user daily income in database
                 $daily_profit = new DailyProfit();
-                $daily_profit->user_id = $data->user_id;
+                $daily_profit->user_id = $user->id;
                 $daily_profit->amount = $data->Daily_income;
                 $daily_profit->action = 'Daily Profit';
                 $daily_profit->save();
