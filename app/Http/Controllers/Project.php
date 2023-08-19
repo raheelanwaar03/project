@@ -140,9 +140,7 @@ class Project extends Controller
         $data->Daily_income = $request->Daily_Income;
         $data->Daily_Withdrawal = $request->Minimum_Withdrawal;
         $data->Total_after_Package_end = $request->Total_After_180_Days;
-        if (Auth::id()) {
-            $data->user_id = Auth::user()->id;
-        }
+        $data->user_id = Auth::user()->id;
         $data->save();
 
         return redirect()->back()->with('success', 'Your package activated successfully.');
