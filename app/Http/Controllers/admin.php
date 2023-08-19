@@ -90,7 +90,7 @@ class admin extends Controller
     public function dailyProfit()
     {
         $packages = Packages::get();
-        if (!!$packages) {
+        if (!$packages) {
             return redirect()->back()->with('error', 'No one buy any package');
         }
 
